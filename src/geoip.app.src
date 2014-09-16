@@ -1,0 +1,12 @@
+{application, geoip,
+ [
+  {description, "Geoip service"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { geoip_app, []}},
+  {env, []}
+ ]}.
