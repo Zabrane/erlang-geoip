@@ -10,6 +10,7 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
+  application:ensure_started(inets),
   geoip_sup:start_link().
 
 stop(_State) ->

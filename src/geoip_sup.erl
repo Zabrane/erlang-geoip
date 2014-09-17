@@ -25,4 +25,5 @@ start_link() ->
 init([]) ->
   BaseFile = application:get_env(geoip, base, "GeoIP.dat"),
   Worker = ?CHILD(geoip_server, worker, [BaseFile, 1, binary]),
-  {ok, { {one_for_one, 5, 10}, [Worker]} }.
+  Updater = ?CHILD(geoip_updater, worker, [BaseFile]),
+  {ok, { {one_for_one, 5, 10}, [Updater, Worker]} }.
