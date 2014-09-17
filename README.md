@@ -8,7 +8,7 @@ Add it as a dependancy in your `rebar.config`:
 
     {deps,
       [
-        {geoip, ".*", {git, "git://github.com/ussi/erlang-geoip.git", "master"}},
+        {geoip, ".*", {git, "git://github.com/maximvl/erlang-geoip.git", "master"}},
       ]
     }.
 
